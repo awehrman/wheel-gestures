@@ -8,6 +8,7 @@ export function WheelTargetObserver(eventListener: (wheelEvent: WheelEventData) 
 
   // add event listener to target element
   const observe = (target: EventTarget): UnobserveTarget => {
+    console.log('observe')
     target.addEventListener('wheel', eventListener as EventListener, { passive: false })
     targets.push(target)
 
